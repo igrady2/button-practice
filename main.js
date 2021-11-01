@@ -1,5 +1,3 @@
-import { getRGB, addListenerToChangeColor } from './helperfunctions';
-
 const button1 = document.getElementById('button-1');
 button1.addEventListener('click', event => {
   button1.style.color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
