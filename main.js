@@ -1,8 +1,9 @@
 const button1 = document.getElementById('button-1');
+
 button1.addEventListener('click', event => {
   button1.style.color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
   buttonArea2.style.backgroundColor = `#05A8AA`;
-  //makes button1 change button one color
+});//makes button1 change button one color
 
   const buttonArea2 = document.getElementById('buttonarea-2');
   const button2 = document.getElementById('button-2');
@@ -62,4 +63,3 @@ button7.addEventListener('click', event => {
   button1.style.color = `black`;
   buttonArea4.style.backgroundColor = `${getInput()}`;
 });
-
