@@ -77,18 +77,20 @@ let nIntervId;
 
 function colorChange() {
   if (!nIntervId) {
-    nIntervId = setInterval(rainbow,50);
+    nIntervId = setInterval(rainbow,500);
     console.log(nIntervId)
   }
 }
 function rainbow() {
     if (hueX = 359) {
     hueX = 0
+    console.log(hueX)
   } else {
     hueX += 1;
     console.log(hueX)
   }
   buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
+  console.log(buttonArea5.style.backgroundColor.value)
 }
 
 function stopChange() {
