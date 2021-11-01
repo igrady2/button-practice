@@ -85,7 +85,7 @@ function rainbow() {
     if (hueX = 359) {
     hueX = 0
   } else {
-    hueX +=;
+    hueX += 1;
     console.log(hueX)
   }
   buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
