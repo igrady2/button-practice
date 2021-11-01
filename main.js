@@ -78,13 +78,15 @@ let nIntervId;
 function colorChange() {
   if (!nIntervId) {
     nIntervId = setInterval(rainbow,50);
+    console.log(nIntervId)
   }
 }
 function rainbow() {
     if (hueX = 359) {
     hueX = 0
   } else {
-    hueX ++;
+    hueX +=;
+    console.log(hueX)
   }
   buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
 }
@@ -92,6 +94,7 @@ function rainbow() {
 function stopChange() {
   clearInterval(nIntervId);
   nIntervId = null;
+  console.log(nIntervId)
 }
 button8.addEventListener("click", stopChange);
 button9.addEventListener('click', colorChange);
