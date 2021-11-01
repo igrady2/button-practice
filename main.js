@@ -75,14 +75,14 @@ const button8 = document.getElementById('button-8') //stop
 const button9 = document.getElementById('button-9') //start
 let nIntervId;
 
-function colorChange() {
+const colorChange = () => {
   if (!nIntervId) {
-    nIntervId = setInterval(rainbow,500);
+    nIntervId = setInterval(rainbow,200);
     console.log(nIntervId)
   }
 }
-function rainbow() {
-    if (hueX = 359) {
+const rainbow = () => {
+    if (hueX === 359) {
     hueX = 0
     console.log(hueX)
   } else {
@@ -93,7 +93,7 @@ function rainbow() {
   console.log(buttonArea5.style.backgroundColor)
 }
 
-function stopChange() {
+const stopChange = () => {
   clearInterval(nIntervId);
   nIntervId = null;
   console.log(nIntervId)
