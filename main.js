@@ -35,21 +35,16 @@ button6.addEventListener('click', event => {
 }); 
 // sets Adds Event listener to reset button, randomizes mystery numbers, and resets background default.   
 
-function changeText(id,num) {
- id.innerHTML = arr[num];
-} //Called in HTML lines 40-42
+//Called in HTML lines 40-42
 
 button3.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = arr[1];
-  changeText(button3,1);
 }); 
 button4.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = arr[2];
-  changeText(button4,2);
 });
 button5.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = arr[3];
-  changeText(button5,3);
 });
 // adds listeners to buttons 3-5.  
 
