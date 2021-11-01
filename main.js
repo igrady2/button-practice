@@ -77,7 +77,7 @@ let nIntervId;
 
 const colorChange = () => {
   if (!nIntervId) {
-    nIntervId = setInterval(rainbow,200);
+    nIntervId = setInterval(rainbow,75);
     console.log(nIntervId)
   }
 }
