@@ -3,6 +3,7 @@
 	<head>
 		<title>Button Testing</title>
 		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script src="./main.js"></script>
 		
 	</head>
 	<body>
@@ -23,31 +24,14 @@
 				<h3>The Button that changes color!</h3>
 				<p>Click the button below and it will change colors randomly!</p>
 				<button class = 'button' id='button-1' type='button'>Click me to change my color</button>
-				<script> 
-//27
-
-const button1 = document.getElementById('button-1');
-button1.addEventListener('click', event => {
-  button1.style.color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  buttonArea2.style.backgroundColor = `#05A8AA`;
-});
-
-				</script>
+				
 			</section>
 		
 			<section class="buttonArea" id="buttonarea-2">
 				<h3>The Button that change changes the background color!</h3>
 				<p>Click the button below and the background will change colors randomly!</p>
 				<button class = 'button' id='button-2' type='button'>Click me to change the background color</button>
-				<script> 
-//42
-const buttonArea2 = document.getElementById('buttonarea-2');
-const button2 = document.getElementById('button-2');
-button2.addEventListener('click', event => {
-  button1.style.color = `black`;
-  buttonArea2.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-});
-				</script>
+
 			</section>
 
 			<section class="buttonArea" id="buttonarea-3">
@@ -58,47 +42,6 @@ button2.addEventListener('click', event => {
 				<button class = 'button-small' id='button-5' type='button' onclick="changeText(this,3)">Mystery Color 3</button>
 				<br>
 				<button class = 'reset-button' id='button-6' type='button'>Reset</button>
-				<script> 
-//56
-let randColor1 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-let randColor2 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-let randColor3 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-const button3 = document.getElementById('button-3');
-const button4 = document.getElementById('button-4');
-const button5 = document.getElementById('button-5');
-const button6 = document.getElementById('button-6');
-const buttonArea3 = document.getElementById('buttonarea-3');
-let arr = [0, randColor1, randColor2, randColor3]
-//71
-button6.addEventListener('click', event => {
-  buttonArea3.style.backgroundColor = '#05A8AA';
-  randColor1 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  randColor2 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  randColor3 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  arr = [0, randColor1, randColor2, randColor3]
-  for (let i = 3; i < 6; i++) {
-  document.getElementById(`button-${i}`).innerHTML = `Mystery Color ${i-2}`;
-}
-//74  
-});
-
-
-function changeText(id,num) {
- id.innerHTML = arr[num];
-}
-
-button3.addEventListener('click', event => {
-  buttonArea3.style.backgroundColor = arr[1];
-});
-button4.addEventListener('click', event => {
-  buttonArea3.style.backgroundColor = arr[2];
-});
-button5.addEventListener('click', event => {
-  buttonArea3.style.backgroundColor = arr[3];
-});
-
-
-				</script>
 			</section>
 
 			<section class="buttonArea" id="buttonarea-4">
@@ -113,24 +56,8 @@ button5.addEventListener('click', event => {
 					<input form="HSL-form" class="numinput" id="Light" max="100" min="0" name="Light" type="number" placeholder="Lightness %" required/>
 					<button form="HSL-form" id="button-7" class="reset-button" type="button" >Change Color</button>
 				</form>
-				<script>
-const buttonArea4 = document.getElementById('buttonarea-4');
-const button7 = document.getElementById('button-7');
-const getInput = () => {
-	let hueInput = document.getElementById('HSL-form').elements[0].value;
-	let satInput = document.getElementById('HSL-form').elements[1].value;
-	let lightInput = document.getElementById('HSL-form').elements[2].value;
-	return `hsl(${hueInput}, ${satInput}%, ${lightInput}%)`;
-}
-button7.addEventListener('click', event => {
-  button1.style.color = `black`;
-  buttonArea4.style.backgroundColor = `${getInput()}`;
-});
-			
-				</script>
 			</section>
 		</main>
-
 	</body>
 </html>
 	
