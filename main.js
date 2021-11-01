@@ -3,6 +3,8 @@ import {
   addListenerToChangeColor
 } from './modules/helperfunctions.js';
 
+console.log(getRGB);
+console.log(getRGB())
 const button1 = document.getElementById('button-1');
 
 button1.addEventListener('click', event => {
