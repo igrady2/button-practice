@@ -6,7 +6,7 @@ import {
 const button1 = document.getElementById('button-1');
 
 button1.addEventListener('click', event => {
-  button1.style.color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+  button1.style.color = getRGB();
   buttonArea2.style.backgroundColor = `#05A8AA`;
 });//makes button1 change button one color
 
@@ -14,12 +14,12 @@ button1.addEventListener('click', event => {
   const button2 = document.getElementById('button-2');
   button2.addEventListener('click', event => {
     button1.style.color = `black`;
-    buttonArea2.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+    buttonArea2.style.backgroundColor = getRGB();
   }); //makes button2 change buttonArea-2's background color
 
-let randColor1 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-let randColor2 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-let randColor3 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+let randColor1 = getRGB();
+let randColor2 = getRGB();
+let randColor3 = getRGB();
 const button3 = document.getElementById('button-3');
 const button4 = document.getElementById('button-4');
 const button5 = document.getElementById('button-5');
@@ -30,9 +30,9 @@ let arr = [0, randColor1, randColor2, randColor3]
 
 button6.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = '#05A8AA';
-  randColor1 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  randColor2 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-  randColor3 = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+  randColor1 = getRGB();
+  randColor2 = getRGB();
+  randColor3 = getRGB();
   arr = [0, randColor1, randColor2, randColor3]
   for (let i = 3; i < 6; i++) {
   document.getElementById(`button-${i}`).innerHTML = `Mystery Color ${i-2}`;
