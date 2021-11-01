@@ -10,3 +10,8 @@ const addListenerToChangeColor = (button,target,att,color1) => {
     target.style.att = color1
   });
 }
+
+export { 
+  getRGB,
+  addListenerToChangeColor
+}
