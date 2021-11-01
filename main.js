@@ -41,12 +41,15 @@ function changeText(id,num) {
 
 button3.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = arr[1];
+  changeText(button3,1);
 }); 
 button4.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = arr[2];
+  changeText(button4,2);
 });
 button5.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = arr[3];
+  changeText(button5,3);
 });
 // adds listeners to buttons 3-5.  
 
