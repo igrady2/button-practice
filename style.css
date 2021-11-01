@@ -1,0 +1,96 @@
+body {
+background-color: grey;
+}
+
+nav span {
+	display: block;
+	font-size: 16px;
+	font-weight: 100;
+	margin: 10px 0px;
+	text-align: center;
+	color: black;
+	width: 100%;
+	max-width: 300 px;
+}
+nav span:link {
+	display: block;
+	font-size: 16px;
+	font-weight: 100;
+	margin: 10px 0px;
+	text-align: center;
+	color: black;
+	width: 100%;
+	max-width: 300 px;
+}
+
+nav span:visited {
+	display: block;
+	font-size: 16px;
+	font-weight: 100;
+	margin: 10px 0px;
+	text-align: center;
+	color: black;
+	width: 100%;
+	max-width: 300 px;
+}
+.header {
+	background-image: url("./button.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+	
+}
+
+.header h1 {
+	position: relative;
+  	top: 40%;  
+	color: black;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	width: 25%;
+	padding: 20px;
+	margin: auto auto;
+	text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
+
+}
+.button {
+	background-color: grey;
+	width: 60%;
+	height: 60%;
+	font-size: 60px
+	
+}
+.button-small {
+   	width: 100%;
+   	max-width: 200px;
+  	box-sizing: border-box;
+   	padding: 20px;
+	margin: 50px, 50px;
+	background-color: grey;
+}
+	
+
+.buttonArea {
+	background-color: #05A8AA;
+	width: 100%;
+	height: 400px;
+	margin: 10px auto;
+}
+
+.numinput {
+	padding: 5px;
+	width: 100%;
+	max-width: 90px;
+}
+
+.reset-button {
+	background-color: grey;
+	margin: 20px 20px;
+	padding: 10px;
+}
+main {
+	text-align: center;
+	
+}
