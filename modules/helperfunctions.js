@@ -1,7 +1,7 @@
 const getRGB = () => {
-  let rRandom = Math.floor(Math.random * 255);
-  let gRandom = Math.floor(Math.random * 255);
-  let bRandom = Math.floor(Math.random * 255);
+  let rRandom = Math.floor(Math.random() * 255);
+  let gRandom = Math.floor(Math.random() * 255);
+  let bRandom = Math.floor(Math.random() * 255);
   return `rgb(${rRandom},${gRandom},${bRandom})`;
 }
 
