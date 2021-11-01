@@ -90,7 +90,7 @@ function rainbow() {
     console.log(hueX)
   }
   buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
-  console.log(buttonArea5.style.backgroundColor.value)
+  console.log(buttonArea5.style.backgroundColor)
 }
 
 function stopChange() {
