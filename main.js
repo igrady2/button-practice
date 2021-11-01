@@ -3,8 +3,8 @@ import {
   addListenerToChangeColor
 } from './modules/helperfunctions.js';
 
-console.log(getRGB);
-console.log(getRGB())
+//console.log(getRGB);
+//console.log(getRGB())
 const button1 = document.getElementById('button-1');
 
 button1.addEventListener('click', event => {
@@ -69,3 +69,29 @@ button7.addEventListener('click', event => {
   button1.style.color = `black`;
   buttonArea4.style.backgroundColor = `${getInput()}`;
 });
+let hueX = 0
+const buttonArea5 = document.getElementById('buttonarea-5');
+const button8 = document.getElementById('button-8') //stop
+const button9 = document.getElementById('button-9') //start
+let nIntervId;
+
+function colorChange() {
+  if (!nIntervId) {
+    nIntervId = setInterval(rainbow,50);
+  }
+}
+function rainbow() {
+    if (hueX = 359) {
+    hueX = 0
+  } else {
+    hueX ++;
+  }
+  buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
+}
+
+function stopChange() {
+  clearInterval(nIntervId);
+  nIntervId = null;
+}
+button8.addEventListener("click", stopChange);
+button9.addEventListener('click', colorChange);
