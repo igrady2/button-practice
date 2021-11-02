@@ -3,32 +3,39 @@ import {
   addListenerToChangeColor
 } from './modules/helperfunctions.js';
 
-//console.log(getRGB);
-//console.log(getRGB())
-const button1 = document.getElementById('button-1');
+//variables
+const button1 = document.getElementById('button-1'); // button - area 1
+const button2 = document.getElementById('button-2'); // button - area 2
+const button3 = document.getElementById('button-3'); // Mystery color 1 - area 3
+const button4 = document.getElementById('button-4'); // Mystery color 2 - area 3
+const button5 = document.getElementById('button-5'); // Mystery color 3 - area 3
+const button6 = document.getElementById('button-6'); // reset - area 3
+const button7 = document.getElementById('button-7'); //change color - area4
+const button8 = document.getElementById('button-8'); //stop -area 5
+const button9 = document.getElementById('button-9'); //start - area 6
+
+const buttonArea2 = document.getElementById('buttonarea-2'); //2nd button area
+const buttonArea3 = document.getElementById('buttonarea-3'); //3rd button area
+const buttonArea4 = document.getElementById('buttonarea-4'); //4th button area
+const buttonArea5 = document.getElementById('buttonarea-5'); //5th button area
+
+let randColor1 = getRGB(); // for arr
+let randColor2 = getRGB(); // for arr
+let randColor3 = getRGB(); // for arr
+let arr = [0, randColor1, randColor2, randColor3] //for area 3 randomization assignment 
+
 
 button1.addEventListener('click', event => {
   button1.style.color = getRGB();
   buttonArea2.style.backgroundColor = `#05A8AA`;
 });//makes button1 change button one color
 
-  const buttonArea2 = document.getElementById('buttonarea-2');
-  const button2 = document.getElementById('button-2');
-  button2.addEventListener('click', event => {
-    button1.style.color = `black`;
-    buttonArea2.style.backgroundColor = getRGB();
-  }); //makes button2 change buttonArea-2's background color
+  
+button2.addEventListener('click', event => {
+  button1.style.color = `black`;
+  buttonArea2.style.backgroundColor = getRGB();
+}); //makes button2 change buttonArea-2's background color
 
-let randColor1 = getRGB();
-let randColor2 = getRGB();
-let randColor3 = getRGB();
-const button3 = document.getElementById('button-3');
-const button4 = document.getElementById('button-4');
-const button5 = document.getElementById('button-5');
-const button6 = document.getElementById('button-6');
-const buttonArea3 = document.getElementById('buttonarea-3');
-let arr = [0, randColor1, randColor2, randColor3]
-// sets variables for buttonarea-3
 
 button6.addEventListener('click', event => {
   buttonArea3.style.backgroundColor = '#05A8AA';
@@ -56,10 +63,7 @@ button5.addEventListener('click', event => {
 });
 // adds listeners to buttons 3-5.  
 
-
-const buttonArea4 = document.getElementById('buttonarea-4');
-const button7 = document.getElementById('button-7');
-const getInput = () => {
+const getInput = () => { //gets HSL form inputs and returns a string 'hsl(input,...,input3)'
 	let hueInput = document.getElementById('HSL-form').elements[0].value;
 	let satInput = document.getElementById('HSL-form').elements[1].value;
 	let lightInput = document.getElementById('HSL-form').elements[2].value;
@@ -69,15 +73,15 @@ button7.addEventListener('click', event => {
   button1.style.color = `black`;
   buttonArea4.style.backgroundColor = `${getInput()}`;
 });
+
+let mS = 25
 let hueX = 0
-const buttonArea5 = document.getElementById('buttonarea-5');
-const button8 = document.getElementById('button-8') //stop
-const button9 = document.getElementById('button-9') //start
-let nIntervId;
+let nIntervId = setInterval(rainbow,mS);
+
 
 const colorChange = () => {
   if (!nIntervId) {
-    nIntervId = setInterval(rainbow,25);
+    nIntervId = setInterval(rainbow,mS);
     button8.innerHTML = 'Stop'
     console.log(nIntervId)
   }
