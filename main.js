@@ -12,7 +12,7 @@ const button5 = document.getElementById('button-5'); // Mystery color 3 - area 3
 const button6 = document.getElementById('button-6'); // reset - area 3
 const button7 = document.getElementById('button-7'); //change color - area4
 const button8 = document.getElementById('button-8'); //stop -area 5
-const button9 = document.getElementById('button-9'); //start - area 6
+const button9 = document.getElementById('button-9'); //start - area 5
 
 const buttonArea2 = document.getElementById('buttonarea-2'); //2nd button area
 const buttonArea3 = document.getElementById('buttonarea-3'); //3rd button area
