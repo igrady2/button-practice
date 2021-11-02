@@ -77,7 +77,7 @@ let nIntervId;
 
 const colorChange = () => {
   if (!nIntervId) {
-    nIntervId = setInterval(rainbow,75);
+    nIntervId = setInterval(rainbow,25);
     button8.innerHTML = 'Stop'
     console.log(nIntervId)
   }
