@@ -34,6 +34,7 @@ nav span:visited {
 	max-width: 300 px;
 }
 .header {
+	border-radius: 25px;
 	background-image: url("./button.jpg");
 	background-position: center;
 	background-size: cover;
