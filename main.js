@@ -73,9 +73,19 @@ button7.addEventListener('click', event => {
   button1.style.color = `black`;
   buttonArea4.style.backgroundColor = `${getInput()}`;
 });
+let hueX = 0;
 
+const rainbow = () => {
+  if (hueX === 359) {
+  hueX = 0
+  } else {
+  hueX += 1;
+  }
+  buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
+  console.log(buttonArea5.style.backgroundColor)
+}
 let mS = 25
-let hueX = 0
+
 let nIntervId = setInterval(rainbow,mS);
 
 
@@ -86,17 +96,8 @@ const colorChange = () => {
     console.log(nIntervId)
   }
 }
-const rainbow = () => {
-    if (hueX === 359) {
-    hueX = 0
-    console.log(hueX)
-  } else {
-    hueX += 1;
-    console.log(hueX)
-  }
-  buttonArea5.style.backgroundColor = `hsl(${hueX}, 50%, 50%)`;
-  console.log(buttonArea5.style.backgroundColor)
-}
+
+  
 
 const stopChange = () => {
   clearInterval(nIntervId);
