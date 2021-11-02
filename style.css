@@ -73,10 +73,12 @@ nav span:visited {
 	
 
 .buttonArea {
+	border-radius: 25px;
 	background-color: #05A8AA;
 	width: 100%;
 	height: 400px;
 	margin: 10px auto;
+	
 }
 
 .numinput {
