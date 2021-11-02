@@ -78,6 +78,7 @@ let nIntervId;
 const colorChange = () => {
   if (!nIntervId) {
     nIntervId = setInterval(rainbow,75);
+    button8.innerHTML = 'Stop'
     console.log(nIntervId)
   }
 }
@@ -96,6 +97,7 @@ const rainbow = () => {
 const stopChange = () => {
   clearInterval(nIntervId);
   nIntervId = null;
+  button8.innerHTML = buttonArea5.style.backgroundColor
   console.log(nIntervId)
 }
 button8.addEventListener("click", stopChange);
